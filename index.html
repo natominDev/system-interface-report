@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Bad UI</title>
+        <link rel="stylesheet" href="./src/stylesheet.css">
+    </head>
+    <body>
+        <h2>Reservation Form for <span class='hl'>SI</span></h2>
+        <lebal style="font-size: 30px;"><input type="checkbox" id="isFixed">fix panels</lebal>
+        <div class="panels">
+            <div class="panel panel1">
+                <p class="name-plate">John Doe</p>
+                <p>Name</p>
+                <form class="add-items">
+                    <input type="text" name="item" placeholder="Item Name" required>
+                    <input type="submit" value="+ Add Item">
+                </form>
+            </div>
+            <div class="panel panel2">
+                <p><span id="current-value"></span> years old</p>
+                <p>Age</p>
+                <div><input type="range" id="example" min="0" max="200" step="1"></div>
+            </div>
+            <div class="panel panel3">
+                <p id="date-display"></p>
+                <p>Date</p>
+                <div><input type="datetime-local" id="date-input"></div>
+            </div>
+            <div class="panel panel4">
+                <p></p>
+                <p>Confirm</p>
+                <label><input type="checkbox" id="confirm-input">Are you feeling well?</label>
+            </div>
+            <div class="panel panel5">
+                <form method="POST">
+                    <input type="submit" id="submit-button" 
+                        class='submitButton' value="submit"
+                        onclick="doSubmit()"></button>
+                </form>
+                <p>Submit</p>
+                <form>
+                    <input type="submit" id="reset-button" 
+                        class="resetButton" value="Reset"
+                        onclick="doReset()"></button>
+                </form>
+            </div>
+        </div>
+
+        <script aria-hidden="true" type="application/x-lastpass" id="hiddenlpsubmitdiv" style="display: none;"></script>
+        <script src="./src/script.js"></script>
+    </body>
+</html>
